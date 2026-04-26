@@ -84,7 +84,7 @@ function createConfetti() {
 }
 
 btnYes.addEventListener('click', () => {
-    responseMessage.innerHTML = '💖 Yay! I knew it! You are the best Didi ever! 💖';
+    responseMessage.innerHTML = '💖 Yay! I knew it! You are the best friend forever! 💖';
     responseMessage.classList.add('show');
     createConfetti();
 
@@ -100,8 +100,8 @@ btnYes.addEventListener('click', () => {
 let noClickCount = 0;
 const noMessages = [
     "Nooo... you can't say no! 😢",
-    "Are you sure? 🥺",
-    "Please say yes, Didi! 💕",
+    "Are you sure think again ? 🥺",
+    "Please say yes, darling ! 💕",
     "I won't let you click no! 😤",
     "My heart is breaking... 💔",
     "Try the other button! 💖"
@@ -176,5 +176,5 @@ if (loveSection) {
     loveObserver.observe(loveSection);
 }
 
-console.log('💕 Dhanashri Didi Website Loaded with Love! 💕');
+console.log('💕 for you made with Love! 💕');
 
