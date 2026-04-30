@@ -1,8 +1,7 @@
-// Floating Background Elements - Enhanced with more hearts
+// Floating Background Elements
 const floatingBg = document.getElementById('floatingBg');
-// More hearts added to the array
 const flowerEmojis = ['🌸', '🌺', '🌻', '🌷', '🌹', '💐', '🌼', '🌿', '🪷'];
-const heartEmojis = ['❤️', '💖', '💗', '💕', '💝', '💘', '💓', '💞', '💔', '🧡', '💜', '🤍'];
+const heartEmojis = ['❤️', '💖', '💗', '💕', '💝', '💘', '💓', '💞'];
 const allEmojis = [...flowerEmojis, ...heartEmojis];
 
 function createFloatingItem() {
@@ -30,13 +29,13 @@ function createFloatingItem() {
     }, (duration + delay) * 1000);
 }
 
-// Create initial batch - increased from 30 to 50
-for (let i = 0; i < 50; i++) {
+// Create initial batch
+for (let i = 0; i < 30; i++) {
     setTimeout(createFloatingItem, Math.random() * 5000);
 }
 
-// Keep creating more - more frequently
-setInterval(createFloatingItem, 600);
+// Keep creating more
+setInterval(createFloatingItem, 800);
 
 // Intersection Observer for scroll animations
 const observerOptions = {
@@ -66,9 +65,8 @@ const btnNo = document.getElementById('btnNo');
 const responseMessage = document.getElementById('responseMessage');
 
 function createConfetti() {
-    // Enhanced confetti with more hearts
-    const confettiEmojis = ['🎉', '✨', '🎊', '💖', '🌸', '💐', '🎈', '⭐', '💕', '🍫', '❤️', '💝', '💗', '💘'];
-    for (let i = 0; i < 50; i++) { // increased from 40 to 50
+    const confettiEmojis = ['🎉', '✨', '🎊', '💖', '🌸', '💐', '🎈', '⭐', '💕', '🍫'];
+    for (let i = 0; i < 40; i++) {
         const confetti = document.createElement('div');
         confetti.classList.add('confetti');
         confetti.textContent = confettiEmojis[Math.floor(Math.random() * confettiEmojis.length)];
@@ -102,8 +100,8 @@ btnYes.addEventListener('click', () => {
 let noClickCount = 0;
 const noMessages = [
     "Nooo... you can't say no! 😢",
-    "Are you sure think again ? 🥺",
-    "Please say yes, darling ! 💕",
+    "Are you sure think again? 🥺",
+    "Please say yes, darling! 💕",
     "I won't let you click no! 😤",
     "My heart is breaking... 💔",
     "Try the other button! 💖"
@@ -168,7 +166,7 @@ if (loveSection) {
     const loveObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                for (let i = 0; i < 15; i++) { // increased from 10 to 15
+                for (let i = 0; i < 10; i++) {
                     setTimeout(createFloatingItem, i * 200);
                 }
             }
@@ -178,36 +176,4 @@ if (loveSection) {
     loveObserver.observe(loveSection);
 }
 
-// Extra floating hearts function - more hearts
-function createExtraHearts() {
-    const heartEmojis = ['💖', '💕', '💗', '💝', '💘', '❤️'];
-    const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.top = '0';
-    container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.pointerEvents = 'none';
-    container.style.zIndex = '50';
-    container.style.overflow = 'hidden';
-    
-    for (let i = 0; i < 20; i++) {
-        const heart = document.createElement('div');
-        heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-        heart.style.position = 'absolute';
-        heart.style.left = `${Math.random() * 100}%`;
-        heart.style.fontSize = `${Math.random() * 2 + 1}rem`;
-        heart.style.animation = `floatHeart ${Math.random() * 3 + 2}s ease-in-out infinite`;
-        heart.style.animationDelay = `${Math.random() * 2}s`;
-        container.appendChild(heart);
-    }
-    
-    document.body.appendChild(container);
-    
-    setTimeout(() => {
-        if (container.parentNode) container.remove();
-    }, 5000);
-}
-
 console.log('💕 for you made with Love! 💕');
-console.log('💖💕💗💝💘💞💓💔❤️ - More hearts added! 💖💕💗💝💘💞💓💔❤️');

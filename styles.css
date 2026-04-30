@@ -59,19 +59,6 @@ body {
     padding: 20px;
 }
 
-/* Extra Hearts */
-.extra-hearts {
-    font-size: 1.8rem;
-    margin: 20px 0;
-    animation: heartGlow 2s ease-in-out infinite;
-    letter-spacing: 8px;
-}
-
-@keyframes heartGlow {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
-}
-
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -472,5 +459,4 @@ body {
     .btn { font-size: 1.1rem; padding: 12px 30px; }
     .emoji-row { font-size: 2rem; }
     .bond-cards { grid-template-columns: 1fr; }
-    .extra-hearts { font-size: 1.4rem; letter-spacing: 4px; }
 }
